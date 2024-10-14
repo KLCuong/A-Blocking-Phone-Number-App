@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#222222">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="175dp">
+
+            <TextView
+                android:id="@+id/tvSreach"
+                android:layout_width="380dp"
+                android:layout_height="45dp"
+                android:background="@android:drawable/bottom_bar"
+                android:backgroundTint="#333333"
+                android:ems="10"
+                android:gravity="center_vertical"
+                android:inputType="text"
+
+                android:text="Nhap ten hoac so dien thoai"
+                android:textColor="@android:color/darker_gray"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.516"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/dial_setting"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                app:layout_constraintEnd_toEndOf="@+id/tvSreach"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/menudots" />
+
+            <LinearLayout
+                android:id="@+id/lineardiallayout"
+                android:layout_width="140dp"
+                android:layout_height="120dp"
+                android:layout_marginTop="16dp"
+                android:background="#444444"
+                android:orientation="vertical"
+                android:visibility="gone"
+                app:layout_constraintEnd_toStartOf="@+id/dial_setting"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:id="@+id/tvlineardial"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:text="Setting"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <ListView
+
+            android:id="@+id/listDial"
+            android:layout_width="match_parent"
+            android:layout_height="600dp">
+
+        </ListView>
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="match_parent"
+            android:layout_height="88dp"
+            android:text="Chua biet de lam gi"
+            android:textAlignment="center"
+            android:textColor="@android:color/darker_gray"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+    </LinearLayout>
+
+</LinearLayout>
