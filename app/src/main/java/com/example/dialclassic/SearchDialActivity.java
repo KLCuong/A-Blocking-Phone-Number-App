@@ -89,6 +89,14 @@ public class SearchDialActivity extends AppCompatActivity {
                     // Cập nhật adapter với danh sách đã lọc
                     adapter = new ArrayAdapter<>(context, android.R.layout.simple_list_item_1, filteredList);
                     listView.setAdapter(adapter);
+                    listView.setOnItemClickListener((parent, view, position, id) -> {
+                        String selectedItem = filteredList.get(position);
+                        Intent intent = new Intent(context, DialInform.class);
+                        intent.putExtra("info_name", selectedItem);
+
+                        startActivity(intent);
+                    });
+
                 } else {
                     linearLayout.setVisibility(View.VISIBLE);
                     listView.setVisibility(View.GONE);
